@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Greatness by FreeHTML5.co
+	Twitter: http://twitter.com/fh5co
+	URL: http://FreeHTML5.co
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Medi</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="static/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="static/css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="static/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="static/js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body >
+
+	<header role="banner" id="fh5co-header" style="color: red">
+		<div class="fluid-container">
+			<nav class="navbar navbar-default navbar-fixed-top js-fullheight" style="width:200px;position: absolute;background-color: #fff0;border-bottom-color: #fff0;">
+					<ul>
+						<li class="active"><a href="{{ url_for ('phome') }}" style="color:red;"><b>Home</b></a></li>
+						<li><a href="{{ url_for ('load') }}" style="color:red;"><b>Load Dataset</b></a></li>
+						<li><a href="{{ url_for ('view') }}" style="color:red;"><b>View Dataset</b></a></li>
+						<li><a href="{{ url_for ('preprocess') }}" style="color:red;"><b>Pre-Processing</b></a></li>
+						<li><a href="{{ url_for ('model') }}" style="color:red;"><b>Training</b></a></li>
+						<li><a href="{{ url_for ('prediction') }}" style="color:red;"><b>Prediction</b></a></li>
+						<li><a href="{{ url_for ('logout') }}" style="color:red;"><b>Logout</b></a></li>
+					</ul>
+
+			</nav>
+		</div>
+	</header>
+
+		<section id="fh5co-home" data-section="home" style="background-image: url(static/images/i3.jpg);background-attachment: fixed;
+  background-position: center;background-repeat: no-repeat;-webkit-background-size: cover;
+  background-size: cover;width:1360px; height:620px" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<center><h2 style="background-color:black;color:red; position:absolute; top:400px; left: 280px">{{msg}}</h2></center>
+							<br><center><h1 style="background-color:black;color:red; width:500px;">BREAST CANCER DETECTION</h1></center>
+							<center><h2 style="background-color:black;color:red; width:500px;">With the help of Ensemble Methods</h2></center>
+							<p>
+
+                                <br><br><form action="{{url_for('preprocess')}}" method="post">
+<!--								<a href="/upload" class="btn btn-primary btn-lg">Get Started</a>-->
+                            <input style="background-color: black;" type="text" name="split" placeholder="Test Split Size">
+                            <input style="background-color: black;" type="submit" value="Submit">
+                                </form>
+<!--								<a href="#" class="btn btn-white btn-outline btn-lg"></a></p>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="static/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="static/js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="static/js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="static/js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="static/js/jquery.magnific-popup.min.js"></script>
+	<script src="static/js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="static/js/main.js"></script>
+
+	</body>
+</html>
+

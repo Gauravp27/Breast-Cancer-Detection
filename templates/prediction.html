@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<!--
+	Greatness by FreeHTML5.co
+	Twitter: http://twitter.com/fh5co
+	URL: http://FreeHTML5.co
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Medi</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="static/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="static/css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="static/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="static/js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body >
+
+<header role="banner" id="fh5co-header" style="color: red">
+		<div class="fluid-container">
+			<nav class="navbar navbar-default navbar-fixed-top js-fullheight" style="width:200px;position: absolute;background-color: #fff0;border-bottom-color: #fff0;">
+					<ul>
+						<li class="active"><a href="{{ url_for ('phome') }}" style="color:red;"><b>Home</b></a></li>
+						<li><a href="{{ url_for ('load') }}" style="color:red;"><b>Load Dataset</b></a></li>
+						<li><a href="{{ url_for ('view') }}" style="color:red;"><b>View Dataset</b></a></li>
+						<li><a href="{{ url_for ('preprocess') }}" style="color:red;"><b>Pre-Processing</b></a></li>
+						<li><a href="{{ url_for ('model') }}" style="color:red;"><b>Training</b></a></li>
+						<li><a href="{{ url_for ('prediction') }}" style="color:red;"><b>Prediction</b></a></li>
+						<li><a href="{{ url_for ('logout') }}" style="color:red;"><b>Logout</b></a></li>
+					</ul>
+
+		</nav>
+	</div>
+</header>
+
+
+<section id="fh5co-home" data-section="home" style="background-image: url(static/images/2.jpg);background-attachment: fixed;
+  background-position: center;background-repeat: no-repeat;-webkit-background-size: cover;
+  background-size: cover;width:1360px; height:820px" data-stellar-background-ratio="0.5">
+
+
+	<div class="overlay"></div>
+	<div class="gtco-container">
+		<div class="row">
+			<div class="col-md-12 col-md-offset-0 text-center">
+				<div class="display-t">
+					<div class="display-tc animate-box" data-animate-effect="fadeIn">
+						<br><h1 style="color: red"><b>BREAST CANCER DETECTION</b></h1>
+						<h2 style="color: orange"><b>With the help of Ensemble Methods</b></h2>
+
+						<center><h1 style="background-color:red; color:black; position:absolute; top:200px; left: 350px; width:400px;"><marquee><b>{{mag}}</b></marquee></h1></center>
+
+						<p>
+
+							<div class="row" style="border-spacing:10px; bottom: 1050px;">
+								<div class="section-container">
+
+									<!-- Add your site or app content here -->
+									{% if result is not defined %}
+									<section id="content">
+										<center>
+											<form action="{{ url_for('prediction') }}" method="post" style="display:table">
+												<!--								<a href="/upload" class="btn btn-primary btn-lg">Get Started</a>-->
+
+						<div class="column" style="border-spacing:10px; bottom: 1050px;position:fixed;top:250px;left:0px">
+
+
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="radius_mean" style="display:table-cell">radius_mean :</label>
+							<input type="text" id="radius_mean" style="width: 100%;" name="radius_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="texture_mean" style="display:table-cell">texture_mean:</label>
+							<input type="text" id="texture_mean" style="width: 100%;" name="texture_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="perimeter_mean" style="display:table-cell">perimeter_mean :</label>
+							<input type="text" id="perimeter_mean" style="width: 100%;" name="perimeter_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="area_mean" style="display:table-cell">area_mean:</label>
+							<input type="text" id="area_mean" style="width: 100%;" name="area_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="smoothness_mean" style="display:table-cell">smoothness_mean :</label>
+							<input type="text" id="smoothness_mean" style="width: 100%;" name="smoothness_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="compactness_mean" style="display:table-cell">compactness_mean :</label>
+							<input type="text" id="compactness_mean" style="width: 100%;" name="compactness_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="concavity_mean" style="display:table-cell">concavity_mean :</label>
+							<input type="text" id="concavity_mean" style="width: 100%;" name="concavity_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="concave points_mean" style="display:table-cell">concave points_mean :</label>
+							<input type="text" id="concave points_mean" style="width: 100%;" name="concave points_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="symmetry_mean" style="display:table-cell">symmetry_mean :</label>
+							<input type="text" id="symmetry_mean" style="width: 100%;" name="symmetry_mean" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="fractal_dimension_mean" style="display:table-cell">fractal_dimension_mean :</label>
+							<input type="text" id="fractal_dimension_mean" style="width: 100%;" name="fractal_dimension_mean" value="">
+						</p>
+
+
+						<div class="column" style="border-spacing:10px; bottom: 1050px; position:fixed;top:250px;left:600px">
+						<div class="row" style="border-spacing:10px; bottom: 100px;position:fixed;top:230px;left:400px">
+
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="radius_se" style="display:table-cell">radius_se :</label>
+							<input type="text" id="radius_se" style="width: 100%;" name="radius_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="texture_se" style="display:table-cell">texture_se :</label>
+							<input type="text" id="texture_se" style="width: 100%;" name="texture_se" value="">
+						</p>
+
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="perimeter_se" style="display:table-cell">perimeter_se :</label>
+							<input type="text" id="perimeter_se" style="width: 100%;" name="perimeter_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="area_se" style="display:table-cell">area_se :</label>
+							<input type="text" id="area_se" style="width: 100%;" name="area_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="smoothness_se" style="display:table-cell">smoothness_se :</label>
+							<input type="text" id="smoothness_se" style="width: 100%;" name="smoothness_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="compactness_se" style="display:table-cell">compactness_se :</label>
+							<input type="text" id="compactness_se" style="width: 100%;" name="compactness_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="concavity_se" style="display:table-cell">concavity_se :</label>
+							<input type="text" id="concavity_se" style="width: 100%;" name="concavity_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="concave points_se" style="display:table-cell">concave_points_se :</label>
+							<input type="text" id="concave points_se" style="width: 100%;" name="concave points_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="symmetry_se" style="display:table-cell">symmetry_se :</label>
+							<input type="text" id="symmetry_se" style="width: 100%;" name="symmetry_se" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="fractal_dimension_se" style="display:table-cell">fractal_dimension_se :</label>
+							<input type="text" id="fractal_dimension_se" style="width: 100%;" name="fractal_dimension_se" value="">
+						</p>
+
+						<div class="column" style="border-spacing:10px; bottom: 1050px; position:fixed;top:250px;left:750px">
+							<div class="row" style="border-spacing:10px; bottom: 100px;position:fixed;top:250px;left:900px">
+						</div>
+
+
+
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="radius_worst" style="display:table-cell">radius_worst :</label>
+							<input type="text" id="radius_worst" style="width: 100%;" name="radius_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="texture_worst" style="display:table-cell">texture_worst :</label>
+							<input type="text" id="texture_worst" style="width: 100%;" name="texture_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="perimeter_worst" style="display:table-cell">perimeter_worst :</label>
+							<input type="text" id="perimeter_worst" style="width: 100%;" name="perimeter_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="area_worst" style="display:table-cell">area_worst:</label>
+							<input type="text" id="area_worst" style="width: 100%;" name="area_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="smoothness_worst" style="display:table-cell">smoothness_worst :</label>
+							<input type="text" id="smoothness_worst" style="width: 100%;" name="smoothness_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="compactness_worst" style="display:table-cell">compactness_worst:</label>
+							<input type="text" id="compactness_worst" style="width: 100%;" name="compactness_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="concavity_worst" style="display:table-cell">concavity_worst:</label>
+							<input type="text" id="concavity_worst" style="width: 100%;" name="concavity_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="concave points_worst" style="display:table-cell">concave_points_worst:</label>
+							<input type="text" id="concave points_worst" style="width: 100%;" name="concave points_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="symmetry_worst" style="display:table-cell">symmetry_worst:</label>
+							<input type="text" id="symmetry_worst" style="width: 100%;" name="symmetry_worst" value="">
+						</p>
+						<p style="display:table-row;color:#FF0000;background-color:black; ">
+							<label for="fractal_dimension_worst" style="display:table-cell">fractal_dimension_worst:</label>
+							<input type="text" id="fractal_dimension_worst" style="width: 100%;" name="fractal_dimension_worst" value="">
+						</p>
+					</div>
+					</div>
+					<input type="submit" value="Predict" style="color:black; margin-bottom: 0px; position: absolute;top: 460px; right:50px ">
+					{% endif %}
+				</div><br>
+				<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+
+
+
+				</form>
+				<!--								<a href="#" class="btn btn-white btn-outline btn-lg"></a></p>-->
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+</section>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+<div class="gototop js-top">
+	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<script src="static/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="static/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="static/js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="static/js/jquery.countTo.js"></script>
+<!-- Magnific Popup -->
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="static/js/main.js"></script>
+
+</body>
+</html>
+
